@@ -19,7 +19,7 @@ node{
    }
    stage('Docker Image Push'){
    withCredentials([string(credentialsId: 'dockerPass', variable: 'dockerPassword')]) {
-   sh "docker login -u gopalaws -p ${dockerPassword} docker.io"
+   sh "docker login -u gopalaws -p ${dockerPassword}"
     }
    sh 'docker push gopalsashti/myweb:0.0.2'
    }
