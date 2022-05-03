@@ -15,7 +15,7 @@ node{
 	        }
 	    }
    stage('Build Docker Imager'){
-   sh 'docker build -t gopalsashti/myweb:0.0.2 gopalaws .'
+   sh 'docker build -t gopalsashti/myweb:0.0.2 .'
    }
    stage('Docker Image Push'){
    withCredentials([string(credentialsId: 'dockerPass', variable: 'dockerPassword')]) {
