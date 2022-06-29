@@ -21,7 +21,7 @@ node{
    withCredentials([string(credentialsId: 'dockerPass', variable: 'dockerPassword')]) {
    sh "docker login -u gopalaws -p ${dockerPassword}"
     }
-   sh 'docker push gopalaws/mypro'
+   sh 'docker push gopalaws/mycicd'
    }
    stage('Nexus Image Push'){
    sh "docker login -u admin -p admin123 13.233.192.31:8083"
