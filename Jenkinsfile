@@ -24,9 +24,9 @@ node{
    sh 'docker push gopalaws/mycicd'
    }
    stage('Nexus Image Push'){
-   sh "docker login -u admin -p admin123 13.233.192.31:8083"
-   sh "docker tag saidamo/myweb:0.0.2 13.233.192.31:8083/damo:1.0.0"
-   sh 'docker push 13.233.192.31:8083/damo:1.0.0'
+   sh "docker login -u admin -p admin123 3.110.45.88:8083"
+   sh "docker tag gopalsashti/myweb:0.0.2 3.110.45.88:8083/gopalaws:1.0.0"
+   sh 'docker push 3.110.45.88:8083/gopalaws:1.0.0'
    }
    stage('Remove Previous Container'){
 	try{
